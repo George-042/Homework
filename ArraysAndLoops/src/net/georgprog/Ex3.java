@@ -22,72 +22,13 @@ public class Ex3 {
                 int count = 2;
                 switch (numOfQuest) {
                     case 1:
-                        System.out.println("What field appears around any item? You have 2 attempts." +
-                                "\nPress 4 if you want to give up.");
-                        System.out.println("1: Magnetic field." +
-                                "\n2: Gravitational field." +
-                                "\n3: Electric field.");
-                        for (int i = 1; i <= 2; i++) {
-                            int yourAns = input.nextInt();
-                            if (yourAns == 4) {
-                                repeat = false;
-                                break;
-                            }
-                            if (yourAns == 2) {
-                                System.out.println("Correct answer!");
-                                break;
-                            } else {
-                                System.out.println("Wrong!");
-                                count--;
-                            }
-                            if (count == 0) {
-                                System.out.println("You used up your attempts and lost!");
-                            }
-                        }
+                        firstQuest(repeat, count, input);
                         break;
                     case 2:
-                        System.out.println("5 * 5? You have 2 attempts." +
-                                "\nPress 1 if you want to give up.");
-                        for (int i = 1; i <= 2; i++) {
-                            int yourAns = input.nextInt();
-                            if (yourAns == 25) {
-                                System.out.println("Correct answer!");
-                                break;
-                            } else {
-                                System.out.println("Wrong!");
-                                count--;
-                            }
-                            if (count == 0) {
-                                System.out.println("You used up your attempts and lost!");
-                            }
-                            if (yourAns == 1) {
-                                repeat = false;
-                            }
-                        }
+                        secondQuest(repeat, count, input);
                         break;
                     case 3:
-                        System.out.println("What programming language is this program written in? You have 2 attempts." +
-                                "\nPress 5 if you want to give up.");
-                        System.out.println("1: Java." +
-                                "\n2: C++." +
-                                "\n3: C#." +
-                                "\n4: Pascal.");
-                        for (int i = 1; i <= 2; i++) {
-                            int yourAns = input.nextInt();
-                            if (yourAns == 1) {
-                                System.out.println("Correct answer!");
-                                break;
-                            } else {
-                                System.out.println("Wrong!");
-                                count--;
-                            }
-                            if (count == 0) {
-                                System.out.println("You used up your attempts and lost!");
-                            }
-                            if (yourAns == 5) {
-                                repeat = false;
-                            }
-                        }
+                        thirdQuest(repeat, count, input);
                         break;
                     case 4:
                         repeat = false;
@@ -97,6 +38,79 @@ public class Ex3 {
             }
         } catch (Exception e) {
             System.out.println("Check correctness of the input!");
+        }
+    }
+
+    private static void firstQuest(boolean repeat, int count, Scanner input) {
+        System.out.println("What field appears around any item? You have 2 attempts." +
+                "\nPress 4 if you want to give up.");
+        System.out.println("1: Magnetic field." +
+                "\n2: Gravitational field." +
+                "\n3: Electric field.");
+        for (int i = 1; i <= 2; i++) {
+            int yourAns = input.nextInt();
+            if (yourAns == 4) {
+                repeat = false;
+                break;
+            }
+            if (yourAns == 2) {
+                System.out.println("Correct answer!");
+                break;
+            } else {
+                System.out.println("Wrong!");
+                count--;
+            }
+            if (count == 0) {
+                System.out.println("You used up your attempts and lost!");
+            }
+        }
+    }
+
+    private static void secondQuest(boolean repeat, int count, Scanner input) {
+        System.out.println("5 * 5? You have 2 attempts." +
+                "\nPress 1 if you want to give up.");
+        for (int i = 1; i <= 2; i++) {
+            int yourAns = input.nextInt();
+            if (yourAns == 1) {
+                repeat = false;
+                break;
+            }
+            if (yourAns == 25) {
+                System.out.println("Correct answer!");
+                break;
+            } else {
+                System.out.println("Wrong!");
+                count--;
+            }
+            if (count == 0) {
+                System.out.println("You used up your attempts and lost!");
+            }
+        }
+    }
+
+    private static void thirdQuest(boolean repeat, int count, Scanner input) {
+        System.out.println("What programming language is this program written in? You have 2 attempts." +
+                "\nPress 5 if you want to give up.");
+        System.out.println("1: Java." +
+                "\n2: C++." +
+                "\n3: C#." +
+                "\n4: Pascal.");
+        for (int i = 1; i <= 2; i++) {
+            int yourAns = input.nextInt();
+            if (yourAns == 5) {
+                repeat = false;
+                break;
+            }
+            if (yourAns == 1) {
+                System.out.println("Correct answer!");
+                break;
+            } else {
+                System.out.println("Wrong!");
+                count--;
+            }
+            if (count == 0) {
+                System.out.println("You used up your attempts and lost!");
+            }
         }
     }
 }
