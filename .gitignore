@@ -9,6 +9,12 @@
 *.zip
 *.tar.gz
 *.rar
-Operators/Operators.iml
+Operators/*.iml
 Operators/.idea
 Operators/out
+ArraysAndLoops/*.iml
+ArraysAndLoops/.idea
+ArraysAndLoops/out
+StringAndRegex/*.iml
+StringAndRegex/.idea
+StringAndRegex/out
