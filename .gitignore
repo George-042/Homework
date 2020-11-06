@@ -18,3 +18,9 @@ ArraysAndLoops/out
 StringAndRegex/*.iml
 StringAndRegex/.idea
 StringAndRegex/out
+Classes/.idea
+Classes/*.iml
+Classes/.*xml
+Classes/target
+Classes/src/test
+Classes/src/main/resources
