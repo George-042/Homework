@@ -21,6 +21,8 @@ public class App {
         System.out.println("By default, id = " + task1.getId());
         task1.setId("None");
         System.out.println(task1.toString());
+        task1.setId(5);
+        System.out.println(task1.toString());
 
         Task task2 = new Task.Builder()
                 .withName("Academy")

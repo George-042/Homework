@@ -6,7 +6,7 @@ import net.georgprog.domain.enums.Priority;
 public class Task<T> implements Taskable {
 
     /**
-     * To change the id, use set. By default, id = 0.
+     * To change the id, use set. By default, id = 0 (Integer).
      */
 
     private String name;
