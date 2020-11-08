@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) {
 
         /**
-         * To change the id, use set. By default, id = 0.
+         * To change the id, use set. By default, id = 0 (Integer).
          */
 
         Task task1 = new Task.Builder()
