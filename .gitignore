@@ -30,3 +30,9 @@ Generics/Planner/.*xml
 Generics/Planner/target
 Generics/Planner/src/test
 Generics/Planner/src/main/resources
+Collections/.idea
+Collections/*.iml
+Collections/.*xml
+Collections/target
+Collections/src/test
+Collections/src/main/resources

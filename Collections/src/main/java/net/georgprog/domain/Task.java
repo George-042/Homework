@@ -3,7 +3,10 @@ package net.georgprog.domain;
 import net.georgprog.domain.enums.Category;
 import net.georgprog.domain.enums.Priority;
 
-public class Task<T> implements Taskable {
+import java.util.List;
+import java.util.Objects;
+
+public class Task<T> implements Taskable, Comparable<Task<T>> {
 
     /**
      * To change the id, use set. By default, id = 0 (Integer).
@@ -19,7 +22,7 @@ public class Task<T> implements Taskable {
         this.id = id;
     }
 
-    public static class Builder <L> {
+    public static class Builder {
         private Task newTask;
 
         public Builder() {
@@ -66,6 +69,36 @@ public class Task<T> implements Taskable {
                 ", category=" + category +
                 ", priority=" + priority +
                 ", id=" + id;
+    }
+
+    @Override
+    public int compareTo(Task<T> o) {
+        return this.getName().compareTo(o.name);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Task<?> task = (Task<?>) o;
+        return Objects.equals(name, task.name) &&
+                Objects.equals(date, task.date) &&
+                category == task.category &&
+                priority == task.priority &&
+                Objects.equals(id, task.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, date, category, priority, id);
+    }
+
+    public static void addToList(Task o, List<Task> tasks) {
+        tasks.add(o);
+    }
+
+    public static void printList(List<Task> tasks) {
+        tasks.forEach(System.out::println);
     }
 
     public String getName() {
