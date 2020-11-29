@@ -36,3 +36,9 @@ Collections/.*xml
 Collections/target
 Collections/src/test
 Collections/src/main/resources
+Exceptions/.idea
+Exceptions/*.iml
+Exceptions/.*xml
+Exceptions/target
+Exceptions/src/test
+Exceptions/src/main/resources
